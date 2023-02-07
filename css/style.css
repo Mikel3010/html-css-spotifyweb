@@ -9,7 +9,13 @@
 .img-xs{
     height: 22px;
 }
-
+.flex{
+    display: flex;
+    align-items: center;
+}
+.home, .search, .librery-nav{
+    margin-bottom: 15px;
+}
 /* typo  */
 span, i, li{
     color: #656565;
@@ -17,19 +23,66 @@ span, i, li{
 strong{
     color: white;
 }
+li{
+    list-style: none;
+    margin-bottom: 25px;
+    font-size: 10px;
+}
 /* nav  */
 .container-nav{
     background-color: black;
-
+    width: 50px;
+    padding: 5px 10px 10px;
+    height: calc(100vh - 90px);
+    position: relative;
 }
+/* logo  */
 .logo-normal img{
     height: 40px;
+    display: none;
 }
 .logo-small img{
     height: 28px;
+    margin-bottom: 15px;
+}
+/* home/search/libreria  */
+.home span, .search span, .librery-nav span{
+    margin-left: 8px;
 }
 .container-nav span{
     font-size: 10px;
+    display: none;
+}
+/* playlist  */
+.container-playlist{
+    margin-top: 30px;
+    display: none;
+}
+.new-playlist{
+    margin-top: 15px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+}
+.new-playlist i{
+    font-size: 37px;
+    margin-right: 10px;
+}
+/* footer nav  */
+.footer-nav{
+    position: absolute;
+    left: 10px;
+    right: 0;
+    bottom: 10px;
+}
+.download{
+    margin-bottom: 10px;
+}
+hr{
+    display: none;
+}
+.user{
+    margin-top: 20px;
 }
 .download img{
     height: 12px;
@@ -40,6 +93,11 @@ strong{
     object-fit: contain;
     background-color: #808080;
     border-radius: 50%;
+}
+.footer-nav span, .footer-nav strong{
+    margin-left: 10px;
+    font-size: 10px;
+    display: none;
 }
 
 /* main  */
