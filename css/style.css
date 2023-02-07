@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+main{
+    display: flex;
+}
 /* common  */
 .img-xs{
     height: 22px;
@@ -26,6 +28,9 @@ strong{
 li{
     list-style: none;
     margin-bottom: 25px;
+    font-size: 10px;
+}
+h3{
     font-size: 10px;
 }
 /* nav  */
@@ -99,9 +104,37 @@ hr{
     font-size: 10px;
     display: none;
 }
-
 /* main  */
+.container-librery{
+    background-color: #141922;
+    height: calc(100vh - 90px);
+    width: calc(100% - 50px);
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 90px;
+    position: relative;
+    overflow: auto;
+}
+/* headerlibrery  */
 
+.header-librery{
+    height: 90px;
+    background-color: rgba(192,192,192,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+/* options  */
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.options div{
+    width: calc(100% /4);
+}
 /* footer  */
 
 /* media  */
