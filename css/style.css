@@ -48,7 +48,8 @@ h2{
     width: 50px;
     padding: 5px 10px 10px;
     height: calc(100vh - 90px);
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 /* logo  */
 .logo-normal img{
@@ -84,10 +85,7 @@ h2{
 }
 /* footer nav  */
 .footer-nav{
-    position: absolute;
-    left: 10px;
-    right: 0;
-    bottom: 10px;
+    margin-top: auto;
 }
 .download{
     margin-bottom: 10px;
@@ -198,5 +196,119 @@ hr{
     margin-bottom: 20px;
 }
 /* footer  */
+.container-footer{
+    background-color: #282828;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    width: 100% ;
+    padding: 10px 10px 0;
+}
 
+/* song  */
+.song{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.song div:first-child{
+    margin-right: 10px;
+}
+.song div:last-child{
+    display: flex;
+    flex-direction: column;
+    margin-left: 22px;
+}
+.song img{
+    height: 28px;
+}
+.song h4{
+    font-size: 10px;
+    color: white;
+}
+.song h5{
+    font-size: 8px;
+    color: #656565;
+}
+.song button{
+    background-color: #282828;
+    border-style: none;
+}
+/* player  */
+.player{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+.container-player{
+    width: 100%;
+}
+.container-player div:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.player button{
+    border-style: none;
+    font-size: 15px;
+    background-color: #282828;
+}
+.player i{
+    color: white;
+}
+.player button:nth-child(3){
+    font-size: 30px;
+}
+.container-track{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-track span{
+    color: white;
+    font-size: 8px;
+}
+.track{
+    width: 68%;
+    display: flex;
+}
+.track div:first-child{
+    width: 20%;
+    background-color: white;
+    height: 4px;
+}
+.track div:last-child{
+    width: 80%;
+    background-color: #5a5a5a;
+    height: 4px;
+}
+/* volum  */
+.volume{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.volume button{
+    border-style: none;
+    background-color: #282828;
+    font-size: 15px;
+}
+.volume i{
+    color: white;
+}
+.volume-track{
+    width: 55%;
+    display: flex;
+}
+.volume-track div:first-child{
+    width: 20%;
+    background-color: white;
+    height: 4px;
+}
+.volume-track div:last-child{
+    width: 80%;
+    background-color: #5a5a5a;
+    height: 4px;
+}
 /* media  */

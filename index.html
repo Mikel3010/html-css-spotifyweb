@@ -13,69 +13,67 @@
     <main>
         <!-- inizio nav  -->
         <div class="container-nav">
-            <nav>
-                <!-- inizio logo  -->
-                <div class="logo">
-                    <div class="logo-normal">
-                        <img src="./img/logo.svg" alt="logo Spotify">
-                    </div>
-                    <div class="logo-small">
-                        <img src="./img/logo-small.svg" alt="logo Spotify small">
-                    </div>
+            <!-- inizio logo  -->
+            <div class="logo">
+                <div class="logo-normal">
+                    <img src="./img/logo.svg" alt="logo Spotify">
                 </div>
-                <!-- fine logo  -->
-                <!-- inizio home search libreria  -->
-                <div class="home flex">
-                    <img src="./img/home.svg" alt="home" class="img-xs">
-                    <span>Home</span>
+                <div class="logo-small">
+                    <img src="./img/logo-small.svg" alt="logo Spotify small">
                 </div>
-                <div class="search flex">
-                    <img src="./img/search.svg" alt="search" class="img-xs">
-                    <span>Cerca</span>
+            </div>
+            <!-- fine logo  -->
+            <!-- inizio home search libreria  -->
+            <div class="home flex">
+                <img src="./img/home.svg" alt="home" class="img-xs">
+                <span>Home</span>
+            </div>
+            <div class="search flex">
+                <img src="./img/search.svg" alt="search" class="img-xs">
+                <span>Cerca</span>
+            </div>
+            <div class="librery-nav flex">
+                <img src="./img/libreria.svg" alt="librery" class="img-xs">
+                <span>La tua libreria</span>
+            </div>
+            <!-- fine home search libreria  -->
+            <!-- inizio playlist  -->
+            <div class="container-playlist">
+                <strong>PLAYLIST</strong>
+                <div class="new-playlist">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <span>Crea Playlist</span>
                 </div>
-                <div class="librery-nav flex">
-                    <img src="./img/libreria.svg" alt="librery" class="img-xs">
-                    <span>La tua libreria</span>
+                <div class="list-playlist">
+                    <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
                 </div>
-                <!-- fine home search libreria  -->
-                <!-- inizio playlist  -->
-                <div class="container-playlist">
-                    <strong>PLAYLIST</strong>
-                    <div class="new-playlist">
-                        <i class="fa-solid fa-square-plus"></i>
-                        <span>Crea Playlist</span>
+            </div>
+            <!-- fine playlist  -->
+            <!-- inizio footer nav  -->
+            <div class="footer-nav">
+                <div class="download flex">
+                    <img src="./img/download.svg" alt="download">
+                    <span>Installa app</span>
+                </div>
+                <hr>
+                <div class="user flex">
+                    <div class="user-img">
+                        <img src="./img/profile.svg" alt="User">
                     </div>
-                    <div class="list-playlist">
-                        <ul>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- fine playlist  -->
-                <!-- inizio footer nav  -->
-                <div class="footer-nav">
-                    <div class="download flex">
-                        <img src="./img/download.svg" alt="download">
-                        <span>Installa app</span>
-                    </div>
-                    <hr>
-                    <div class="user flex">
-                        <div class="user-img">
-                            <img src="./img/profile.svg" alt="User">
-                        </div>
-                        <div class="user-name">
-                            <strong>John Doe</strong>
-                        </div>
+                    <div class="user-name">
+                        <strong>John Doe</strong>
                     </div>
                 </div>
-                <!-- fine footer nav  -->
-            </nav>
+            </div>
+            <!-- fine footer nav  -->
         </div>
         <!-- fine nav  -->
         <!-- inizio libreria  -->
@@ -120,7 +118,7 @@
                         <div>
                             <img src="./img/stranger.jpeg" alt="stranger">
                             <h2>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h2>
-                            <h3>Kyle Dixon & Michael</h3>
+                            <h3>Kyle Dixon & Michael Stein</h3>
                         </div>
                         <div>
                             <img src="./img/aquietplace.jpeg" alt="quiet place">
@@ -188,6 +186,54 @@
     <!-- fine main  -->
     <!-- inizio footer  -->
     <footer>
+        <div class="container-footer">
+            <div class="song">
+                <div>
+                    <img src="./img/sinister.jpeg" alt="sinister">
+                </div>
+                <div>
+                    <h4>Sinister</h4>
+                    <h5>Brano</h5>
+                    <h5>Nome</h5>
+                </div>
+                <div>
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-regular fa-folder"></i></button>
+                </div>
+            </div>
+            <div class="player">
+                <div class="container-player">
+                    <div>
+                        <button><i class="fa-solid fa-shuffle"></i></button>
+                        <button><i class="fa-solid fa-backward-step"></i></button>
+                        <button><i class="fa-regular fa-circle-play"></i></button>
+                        <button><i class="fa-solid fa-forward-step"></i></button>
+                        <button><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                    </div>
+                    <div class="container-track">
+                        <span>0:25</span>
+                        <div class="track">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <span>4:35</span>
+                    </div>
+                </div>
+            </div>
+            <div class="volume">
+                <div>
+                    <button><i class="fa-solid fa-list"></i></button>
+                    <button><i class="fa-solid fa-display"></i></button>
+                    <button><i class="fa-solid fa-volume-high"></i></button>
+                </div>
+                <div class="volume-track">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- fine footer  -->
     
