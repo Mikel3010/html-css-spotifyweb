@@ -355,19 +355,30 @@ hr{
         left: 230px;
     }
     .options div{
-        width: calc(100% /3);
+        width: calc(100% /5);
     }
     .container-librery{
         width: calc(100% - 230px);
     }
-}
-@media screen and (min-widht: 640px) {
-    .options div{
+    .container-played div{
         width: calc(100% /4);
+    }
+    /* for user  */
+    .container-for-user div{
+        width: calc(100% /4);
+    }
+    /* popolari  */
+    .container-popular-img{
+        width: calc(100% /4);
+    }
+}
+@media screen and (min-width: 640px){
+    .options div{
+        width: calc(100% /5);
     }
     /* played  */
     .container-played div{
-        width: calc(100% /6);
+        width: calc(100% /4);
     }
     /* for user  */
     .container-for-user div{
