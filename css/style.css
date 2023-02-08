@@ -4,8 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
+    width: 100%;
+}
 main{
     display: flex;
+    height: calc(100vh - 90px);
 }
 /* common  */
 .img-xs{
@@ -33,21 +39,25 @@ li{
 h3{
     font-size: 10px;
     color: #656565;
+    margin-bottom: 10px;
+    font-weight: 800;
 }
 h1{
     font-size: 18px;
     color: white;
+    margin-bottom: 12px;
 }
 h2{
     font-size: 12px;
     color: white;
+    margin-bottom: 12px;
 }
 /* nav  */
 .container-nav{
     background-color: black;
     width: 50px;
     padding: 5px 10px 10px;
-    height: calc(100vh - 90px);
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -70,7 +80,7 @@ h2{
 }
 /* playlist  */
 .container-playlist{
-    margin-top: 30px;
+    margin-top: 15px;
     display: none;
 }
 .new-playlist{
@@ -114,7 +124,7 @@ hr{
 /* main  */
 .container-librery{
     background-color: #141922;
-    height: calc(100vh - 90px);
+    height: 100%;
     width: calc(100% - 50px);
     padding-left: 20px;
     padding-right: 30px;
@@ -129,11 +139,12 @@ hr{
 .header-librery{
     height: 90px;
     background-color: rgba(192,192,192,0.3);
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 50px;
     right: 0;
     text-align: right;
+    z-index: 2;
 }
 /* options  */
 .options{
@@ -187,13 +198,17 @@ hr{
 .container-popular{
     display: flex;
 }
-.container-popular div{
+.container-popular-img{
     width: calc(100% /2);
     text-align: center;
 }
+
 .container-popular img{
     width: 100%;
+    height: 100%;
     margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 /* footer  */
 .container-footer{
@@ -207,9 +222,9 @@ hr{
 
 /* song  */
 .song{
-    width: 30%;
+    width: 8.4375rem;
     display: flex;
-    align-items: center;
+    margin-top: 15px;
 }
 .song div:first-child{
     margin-right: 10px;
@@ -225,10 +240,12 @@ hr{
 .song h4{
     font-size: 10px;
     color: white;
+    margin-bottom: 2px;
 }
 .song h5{
     font-size: 8px;
     color: #656565;
+    margin-bottom: 2px;
 }
 .song button{
     background-color: #282828;
@@ -236,15 +253,15 @@ hr{
 }
 /* player  */
 .player{
-    width: 35%;
+    width: 190px;
     display: flex;
-    align-items: center;
+    align-content: space-between;
 }
 .container-player{
     width: 100%;
 }
 .container-player div:first-child{
-    width: 100%;
+    width: 190px;
     display: flex;
     justify-content: space-between;
 }
@@ -260,9 +277,11 @@ hr{
     font-size: 30px;
 }
 .container-track{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 5px;
 }
 .container-track span{
     color: white;
@@ -284,10 +303,9 @@ hr{
 }
 /* volum  */
 .volume{
-    width: 30%;
+    width: 9.375rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .volume button{
     border-style: none;
@@ -312,3 +330,80 @@ hr{
     height: 4px;
 }
 /* media  */
+@media screen and (min-width: 552px) {
+    /* nav  */
+    .container-nav{
+        width: 230px;
+    }
+    .logo-small img{
+        display: none;
+    }
+    .logo-normal img{
+        display: block;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    .container-nav span{
+        display: block;
+    } 
+    .container-playlist{
+        display: block;
+        overflow: auto;
+    }
+    /* libreria */
+    .header-librery{
+        left: 230px;
+    }
+    .options div{
+        width: calc(100% /3);
+    }
+    .container-librery{
+        width: calc(100% - 230px);
+    }
+}
+@media screen and (min-widht: 640px) {
+    .options div{
+        width: calc(100% /4);
+    }
+    /* played  */
+    .container-played div{
+        width: calc(100% /6);
+    }
+    /* for user  */
+    .container-for-user div{
+        width: calc(100% /4);
+    }
+    /* popolari  */
+    .container-popular-img{
+        width: calc(100% /4);
+    }
+    /* footer  */
+    .song div:last-child{
+        flex-direction: row;
+    }   
+}
+@media  screen and (min-width: 878px) {
+    /* media nav  */
+    
+    /* libreria */
+    
+    .options div{
+        width: calc(100% /6);
+    }
+    /* played  */
+    .container-played div{
+        width: calc(100% /6);
+    }
+    /* for user  */
+    .container-for-user div{
+        width: calc(100% /6);
+    }
+    /* popolari  */
+    .container-popular-img{
+        width: calc(100% /6);
+    }
+    /* footer  */
+    .song div:last-child{
+        flex-direction: row;
+    }
+}
