@@ -91,7 +91,7 @@ span:hover, a:hover, li:hover,
 .container-nav{
     background-color: black;
     width: 50px;
-    padding: 5px 10px 10px;
+    padding: 5px 10px 10px 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -101,10 +101,12 @@ span:hover, a:hover, li:hover,
 .logo-normal img{
     height: 40px;
     display: none;
+    padding-left: 10px;
 }
 .logo-small img{
     height: 28px;
     margin-bottom: 15px;
+    padding-left: 10px;
 }
 /* home/search/libreria  */
 .home span, .search span, .librery-nav span{
@@ -114,10 +116,19 @@ span:hover, a:hover, li:hover,
     font-size: 10px;
     display: none;
 }
+.home img{
+    border-left: #adff2f 2px solid;
+    padding-left: 8px;
+}
+.search, .librery-nav{
+    padding-left: 10px;
+}
+
 /* playlist  */
 .container-playlist{
     margin-top: 10px;
     display: none;
+    margin-left: 10px;
 }
 .new-playlist{
     margin-top: 10px;
@@ -132,6 +143,7 @@ span:hover, a:hover, li:hover,
 /* footer nav  */
 .footer-nav{
     margin-top: auto;
+    padding-left: 10px;
 }
 .download{
     margin-bottom: 10px;
@@ -200,8 +212,20 @@ hr{
     padding-left: 10px;
 }
 .options div{
-    padding: 5px 10px;
+    padding-right: 10px;
     margin-top: 15px;
+}
+.option-border{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+.option-border::after{
+    content: "";
+    width: 40%;
+    height: 2px;
+    background-color: #adff2f;
+    margin-left: 30%;
 }
 /* played  */
 .played{
