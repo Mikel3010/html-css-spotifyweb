@@ -51,12 +51,41 @@ h2{
     font-size: 12px;
     color: white;
     margin-bottom: 12px;
+    margin-top: 15px;
 }
 a{
     text-decoration: none;
     font-size: 10px;
     color: #656565;
     margin-bottom: 10px;
+}
+/* hoover  */
+span:hover, a:hover, li:hover,
+.container-footer .song button i:hover,
+.new-playlist:hover i, .new-playlist:hover span,
+.container-player button:hover{
+    color: white;
+    cursor: pointer;
+}
+.new-playlist:hover{
+    cursor: pointer;
+}
+.header-librery button:hover,
+.container-player button:nth-child(3):hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.button-hover:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.track div:first-child:hover,
+.volume-track div:first-child:hover{
+    background-color: lawngreen;
+}
+.track span:hover,
+.volume-track span:hover{
+    opacity: 1;
 }
 /* nav  */
 .container-nav{
@@ -182,14 +211,37 @@ hr{
     display: flex;
     flex-wrap: wrap;
 }
-.container-played div{
+.container-played-img{
     width:calc(100% /2);
     padding: 5px;
     text-align: center;
 }
+.img-played{
+    position: relative;
+}
+.button-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.button-hover button{
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 40px;
+}
+.button-hover i{
+    color: white;
+}
 .container-played img{
     width: 100%;
-    margin-bottom: 20px;
+    display: block;
 }
 /* for user  */
 .for-user{
@@ -198,14 +250,17 @@ hr{
 .container-for-user{
     display: flex;
 }
-.container-for-user div{
+.container-for-user-img{
     width: calc(100% /2);
     text-align: center;
     padding: 5px;
 }
+.img-for-user{
+    position: relative;
+}
 .container-for-user img{
     width: 100%;
-    margin-bottom: 20px;
+    display: block;
 }
 /* artisti popolari  */
 .popular{
@@ -219,16 +274,20 @@ hr{
     text-align: center;
     padding: 5px;
 }
-
+.img-popular{
+    position: relative;
+}
+.img-popular .button-hover{
+    border-radius: 50%;
+}
 .container-popular img{
     width: 100%;
     height: 100%;
-    margin-bottom: 20px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
 }
 /* footer  */
-
 .container-footer{
     background-color: #282828;
     height: 90px;
@@ -237,7 +296,6 @@ hr{
     width: 100% ;
     padding: 10px 10px 0;
 }
-
 /* song  */
 .song{
     width: 8.4375rem;
@@ -271,7 +329,7 @@ hr{
 }
 /* player  */
 .player{
-    width: 190px;
+    width: 35%;
     display: flex;
     align-content: space-between;
 }
@@ -279,9 +337,10 @@ hr{
     width: 100%;
 }
 .container-player div:first-child{
-    width: 190px;
+    max-width: 190px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 .player button{
     border-style: none;
@@ -298,32 +357,49 @@ hr{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-top: 5px;
+    justify-content: center;
 }
 .container-track span{
     color: white;
     font-size: 8px;
 }
 .track{
-    width: 68%;
+    width: 100%;
     display: flex;
+    margin: 0 5px;
+    justify-content: center;
 }
 .track div:first-child{
     width: 20%;
     background-color: white;
     height: 4px;
+    display: flex;
+    align-items: center;
 }
 .track div:last-child{
     width: 80%;
     background-color: #5a5a5a;
     height: 4px;
 }
+.track span{
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+    opacity: 0;
+}
 /* volum  */
 .volume{
     width: 9.375rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.volume div:first-child{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
 }
 .volume button{
     border-style: none;
@@ -334,18 +410,26 @@ hr{
     color: white;
 }
 .volume-track{
-    width: 55%;
+    width: 45%;
     display: flex;
 }
 .volume-track div:first-child{
     width: 20%;
     background-color: white;
     height: 4px;
+    display: flex;
+    align-items: center;
 }
 .volume-track div:last-child{
     width: 80%;
     background-color: #5a5a5a;
     height: 4px;
+}
+.volume-track span{
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+    opacity: 0;
 }
 /* media  */  
 @media screen and (min-width: 552px) {
@@ -377,6 +461,9 @@ hr{
     hr{
         display: block;
     }
+    .footer-nav span, .footer-nav strong{
+        display: block;
+    }
     /* libreria */
     .header-librery{
         left: 230px;
@@ -384,25 +471,14 @@ hr{
     .container-librery{
         width: calc(100% - 230px);
     }
-    .container-played div{
-        width: calc(100% /4);
-    }
-    /* for user  */
-    .container-for-user div{
-        width: calc(100% /4);
-    }
-    /* popolari  */
-    .container-popular-img{
-        width: calc(100% /4);
-    }
 }
 @media screen and (min-width: 640px){
     /* played  */
-    .container-played div{
+    .container-played-img{
         width: calc(100% /4);
     }
     /* for user  */
-    .container-for-user div{
+    .container-for-user-img{
         width: calc(100% /4);
     }
     /* popolari  */
@@ -412,18 +488,30 @@ hr{
     /* footer  */
     .song div:last-child{
         flex-direction: row;
-    }   
+        align-items: flex-start;
+        margin-left: 40px;
+    }
+    .song div:last-child button{
+        margin-left: 15px;
+        margin-top: 10px;
+    } 
+    .song{
+        width: 170px;
+    }  
+    .volume{
+        width: 195px;
+    } 
 }
 @media  screen and (min-width: 878px) {
     /* media nav  */
     
     /* libreria */
     /* played  */
-    .container-played div{
+    .container-played-img{
         width: calc(100% /6);
     }
     /* for user  */
-    .container-for-user div{
+    .container-for-user-img{
         width: calc(100% /6);
     }
     /* popolari  */
@@ -431,7 +519,4 @@ hr{
         width: calc(100% /6);
     }
     /* footer  */
-    .song div:last-child{
-        flex-direction: row;
-    }
 }
